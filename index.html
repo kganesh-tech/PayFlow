@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayFlow — Payments Made Simple</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-mark">P</span>
+            <span>PayFlow</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#products">Products</a>
+            <a href="#developers">Developers</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-link">Login</a>
+            <a href="signup.html" class="signup-btn">Get Started</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">
+                    <span></span>
+                    Payment infrastructure for modern businesses
+                </div>
+
+                <h1>
+                    Move money.
+                    <span>Move business forward.</span>
+                </h1>
+
+                <p>
+                    PayFlow gives businesses simple and powerful tools
+                    to accept payments, manage transactions and build
+                    seamless payment experiences.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="signup.html" class="primary-btn">
+                        Get Started
+                        <span>→</span>
+                    </a>
+
+                    <a href="#developers" class="secondary-btn">
+                        Explore PayFlow
+                    </a>
+                </div>
+
+                <div class="trust">
+                    <div class="trust-item">
+                        <strong>99.9%</strong>
+                        <span>Platform uptime</span>
+                    </div>
+
+                    <div class="trust-line"></div>
+
+                    <div class="trust-item">
+                        <strong>Secure</strong>
+                        <span>Payment infrastructure</span>
+                    </div>
+
+                    <div class="trust-line"></div>
+
+                    <div class="trust-item">
+                        <strong>24/7</strong>
+                        <span>Transaction processing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="glow"></div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-top">
+                        <div>
+                            <span class="small-label">Total balance</span>
+                            <h2>₹2,48,560</h2>
+                        </div>
+
+                        <div class="status">
+                            <span></span>
+                            Live
+                        </div>
+                    </div>
+
+                    <div class="chart">
+                        <div class="chart-line line-one"></div>
+                        <div class="chart-line line-two"></div>
+                        <div class="chart-line line-three"></div>
+                        <div class="chart-path"></div>
+                    </div>
+
+                    <div class="dashboard-bottom">
+                        <div>
+                            <span class="small-label">Transactions</span>
+                            <strong>1,284</strong>
+                        </div>
+
+                        <div>
+                            <span class="small-label">Success rate</span>
+                            <strong>98.7%</strong>
+                        </div>
+
+                        <div>
+                            <span class="small-label">This month</span>
+                            <strong>+18.4%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-card">
+                    <div class="payment-icon">₹</div>
+                    <div>
+                        <span>Payment received</span>
+                        <strong>+ ₹12,500</strong>
+                    </div>
+                    <div class="check">✓</div>
+                </div>
+
+                <div class="floating-card">
+                    <span>Today's revenue</span>
+                    <strong>₹34,820</strong>
+                    <small>+12.8%</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="products">
+            <div class="section-heading">
+                <span class="section-label">POWERFUL TOOLS</span>
+                <h2>Everything you need to manage payments</h2>
+                <p>
+                    One platform designed to simplify the way your business
+                    handles payments and transactions.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">₹</div>
+                    <h3>Payment Requests</h3>
+                    <p>
+                        Create and share payment requests with your customers
+                        through a simple and reliable workflow.
+                    </p>
+                    <a href="#">Learn more →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">↗</div>
+                    <h3>Transaction Management</h3>
+                    <p>
+                        Track successful, pending and failed transactions
+                        from one centralized dashboard.
+                    </p>
+                    <a href="#">Learn more →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">{ }</div>
+                    <h3>Developer APIs</h3>
+                    <p>
+                        Build powerful payment experiences using simple,
+                        developer-friendly APIs and webhooks.
+                    </p>
+                    <a href="#">Learn more →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="developer-section" id="developers">
+            <div class="developer-content">
+                <span class="section-label">BUILT FOR DEVELOPERS</span>
+                <h2>Simple APIs.<br><span>Powerful payments.</span></h2>
+                <p>
+                    Integrate PayFlow into your applications and build
+                    payment experiences without unnecessary complexity.
+                </p>
+
+                <a href="#" class="primary-btn">
+                    Explore Developers
+                    <span>→</span>
+                </a>
+            </div>
+
+            <div class="code-card">
+                <div class="code-header">
+                    <div class="window-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span>payment.js</span>
+                </div>
+
+                <div class="code-content">
+                    <p><span class="purple">const</span> payment = <span class="yellow">await</span> payflow.payments.create({</p>
+                    <p class="indent">amount: <span class="green">12500</span>,</p>
+                    <p class="indent">currency: <span class="string">"INR"</span>,</p>
+                    <p class="indent">customer: <span class="string">"customer_123"</span></p>
+                    <p>});</p>
+                    <br>
+                    <p><span class="purple">console</span>.log(payment.status);</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="pricing">
+            <div>
+                <span class="section-label">START BUILDING</span>
+                <h2>Ready to move your business forward?</h2>
+                <p>Start building your payment infrastructure with PayFlow.</p>
+            </div>
+
+            <a href="signup.html" class="primary-btn">
+                Create your account
+                <span>→</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <span class="logo-mark">P</span>
+            <span>PayFlow</span>
+        </div>
+
+        <p>Payments infrastructure for modern businesses.</p>
+
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <span class="copyright">© 2026 PayFlow. All rights reserved.</span>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PAYFLOW</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="container">
+            <section id="hero-image">
+
+            </section>
+            <div class="signupcontainer">
+            <h1>Create Merchant Account</h1>
+            <form id="signupform">
+                
+                    <label for="business name">BUSSINESS NAME:</label>
+                    <input type="text" id="bussinessname" required>
+                     <label for="OWNER name">OWNER NAME:</label>
+                    <input type="text" id="ownername" required>
+                     <label for="email">EMAIL:</label>
+                    <input type="email" id="email" required>
+                     <label for="phone">PHONE:</label>
+                    <input type="phone" id="phone" required>
+                     <label for="password">PASSWORD:</label>
+                    <input type="password" id="password" required>
+                     <label for="password">CONFIRM PASSWORD:</label>
+                    <input type="password" id="confirmpassword" required>
+                    <p id="passwordError"></p>
+
+                    <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        I agree to the 
+                        <a href="#">Terms of Service</a>
+                         and
+                         <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                    <button type="submit" id="signup">SIGNUP</button>
+                    <p id="passwordError1"></p>
+
+                
+            </form>
+            
+        </div>
+
+        <script src="signup.js"></script>
+    </body>
+</html>

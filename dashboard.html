@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAYFLOW</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav class="nav-items">
+
+        <h1>PAYFLOW</h1>
+
+        <a href="dashboard.html">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Overview</span>
+        </a>
+
+        <a href="payments.html">
+            <i data-lucide="credit-card"></i>
+            <span>Payments</span>
+        </a>
+
+        <a href="#">
+            <i data-lucide="file-text"></i>
+            <span>Requests</span>
+        </a>
+
+        <a href="#">
+            <i data-lucide="arrow-left-right"></i>
+            <span>Transactions</span>
+        </a>
+
+        <a href="#" id="customersLink">
+            <i data-lucide="users"></i>
+            <span>Customers</span>
+        </a>
+
+        <a href="#">
+            <i data-lucide="key-round"></i>
+            <span>API Keys</span>
+        </a>
+
+        <a href="#">
+            <i data-lucide="settings"></i>
+            <span>Settings</span>
+        </a>
+
+        <div class="profile-item">
+            <span id="username">username</span>
+            <a href="login.html">Logout</a>
+        </div>
+
+    </nav>
+    <div class="top-navbar">
+
+    <div class="navbar-right">
+
+        <button class="notification-btn">
+            <i data-lucide="bell"></i>
+        </button>
+
+        <div class="merchant-profile" id="merchantProfile">
+
+            <div class="profile-icon">
+                <i data-lucide="user"></i>
+            </div>
+
+            <div class="merchant-info">
+                <span class="merchant-name" id="bussinessname">Ganesh Payments</span>
+                <span class="merchant-id" id="merchantid">MID: mer_xxxxxxxx</span>
+                
+            </div>
+
+            <i data-lucide="chevron-down"></i>
+
+        </div>
+
+        <div class="profile-dropdown" id="profileDropdown">
+
+            <div class="dropdown-info" id="profileinfo">
+                <span  id="bussinessname"></span>
+                <span  id="merchantid"></span>
+                <span  id="email"></span>
+            </div>
+
+            <div class="dropdown-divider"></div>
+
+            <a href="login.html">Logout</a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="dashboard-items" id="dashboardsection">
+    <div class="cards">
+        <div class="card">
+            <h3>Welcome <span id="USERNAME">username</span></h3>
+            <p>Here's what happening with your PayFlow account today.</p>
+
+            <button type="submit" class="createPayment" id="createpaymentrequest">Create Payment Request</button>
+        </div>
+          </div>
+   <div class="cards-payments">
+    <div class="stats-card">
+            <h3>Total Payments</h3>
+            <span id="totalPayments">0</span>
+        </div>
+         <div class="stats-card">
+            <h3>Successful</h3>
+            <span id="successfulPayments">0</span>
+        </div>
+         <div class="stats-card">
+            <h3>Pending</h3>
+            <span id="pendingPayments">0</span>
+        </div>
+         <div class="stats-card">
+            <h3>Failed</h3>
+            <span id="failedPayments">0</span>
+        </div>
+
+   </div>
+        
+  
+    
+    
+</div>
+<div class="modal-overlay" id="paymentModal">
+
+    <div class="payment-modal">
+
+        <div class="modal-header">
+            <h2>Create Payment Request</h2>
+            <button id="closeModal">&times;</button>
+        </div>
+
+        <p class="modal-description">
+            Create a payment request for your customer.
+        </p>
+
+        <form id="paymentRequestForm">
+
+            <label>Customer Name</label>
+            <input
+                type="text"
+                id="customerName"
+                placeholder="e.g. Rahul Sharma" required
+            >
+
+            <label>Amount</label>
+            <input
+                type="number"
+                id="amount"
+                placeholder="e.g. 2500" required
+            >
+
+            <label>Invoice / Order ID</label>
+            <input
+                type="text"
+                id="orderId"
+                placeholder="e.g. INV-001" required
+            >
+
+            <label>Description</label>
+            <input
+                type="text"
+                id="description"
+                placeholder="e.g. Laptop Repair" required
+            >
+
+            <div class="modal-buttons">
+                <button type="button" id="closeModalBtn">
+                    Close
+                </button>
+
+                <button type="submit" id="requestCustomerBtn">
+                    Request Customer
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="customer-requests">
+
+</div>
+
+</div>
+
+<script src="dashboard.js"></script>
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
