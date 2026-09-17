@@ -117,7 +117,7 @@ form.addEventListener("submit" , function(event) {
     }
     
     console.log(CustomerDetails);
-    fetch("http://localhost:3000/Customers" , {
+    fetch("https://payflow-1-kh51.onrender.com/Customers" , {
         method : "POST",
         headers : {
             "Content-Type" : "application/json",
