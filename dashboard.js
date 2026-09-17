@@ -44,7 +44,7 @@ document.addEventListener("click", (event) => {
 
 });
 
-fetch("http://localhost:3000/merchants" , {
+fetch(" https://payflow-1-kh51.onrender.com/merchants" , {
 
     method : "GET",
     headers : {
