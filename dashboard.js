@@ -44,28 +44,29 @@ document.addEventListener("click", (event) => {
 
 });
 
-fetch(" https://payflow-1-kh51.onrender.com/merchants" , {
 
-    method : "GET",
-    headers : {
-        
-        "Authorization" : `Bearer ${token}`
+fetch("https://payflow-1-kh51.onrender.com/merchants", {
+
+    method: "GET",
+
+    headers: {
+        "Authorization": `Bearer ${token}`
     }
-
-    
-    
 
 })
 .then(res => res.json())
 .then(data => {
-   const merchantId = data.user.merchantId;
+    const merchantId = data.user.merchantId;
     console.log(merchantId);
 });
-const dashboardItems = 
+
+
+const dashboardItems =
 document.querySelector(".document-items");
 
 document.getElementById("username").textContent = merchant.ownername;
 document.getElementById("USERNAME").textContent = merchant.ownername;
+
 
 const createPaymentRequest =
 document.getElementById("createpaymentrequest");
@@ -73,7 +74,7 @@ document.getElementById("createpaymentrequest");
 const paymentModal =
 document.getElementById("paymentModal");
 
-const closeModal = 
+const closeModal =
 document.getElementById("closeModal");
 
 const closeModalBtn =
@@ -82,71 +83,99 @@ document.getElementById("closeModalBtn");
 const form =
 document.getElementById("paymentRequestForm");
 
-createPaymentRequest.addEventListener("click" , function(event) {
+
+createPaymentRequest.addEventListener("click", function(event) {
     event.preventDefault();
     paymentModal.style.display = "flex";
 });
-closeModal.addEventListener("click" , function(event) {
+
+
+closeModal.addEventListener("click", function(event) {
     event.preventDefault();
-    paymentModal.style.display ="none";
+    paymentModal.style.display = "none";
 });
 
-closeModalBtn.addEventListener("click" , function(event) {
+
+closeModalBtn.addEventListener("click", function(event) {
     event.preventDefault();
 
     paymentModal.style.display = "none";
 });
 
-form.addEventListener("submit" , function(event) {
+
+form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const CustomerName =
     document.getElementById("customerName").value;
+
     const Amount =
     document.getElementById("amount").value;
+
     const OrderId =
     document.getElementById("orderId").value;
+
     const Description =
     document.getElementById("description").value;
+
 
     const CustomerDetails = {
         CustomerName,
         Amount,
         OrderId,
         Description
-    }
-    
+    };
+
+
     console.log(CustomerDetails);
-    fetch("https://payflow-1-kh51.onrender.com/Customers" , {
-        method : "POST",
-        headers : {
-            "Content-Type" : "application/json",
-            "Authorization" : `Bearer ${token}`
+
+
+    fetch("https://payflow-1-kh51.onrender.com/Customers", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
         },
-        body : JSON.stringify(CustomerDetails)
+
+        body: JSON.stringify(CustomerDetails)
+
     })
 
     .then(res => res.json())
+
     .then(data => {
+
         alert(data.message);
+
         console.log(data.customer);
+
+
         const dashboardsection =
         document.getElementById("dashboardsection");
+
 
         const customerLink =
         document.getElementById("customerLink");
 
-        customerLink.addEventListener("click" , function(event) {
+
+        customerLink.addEventListener("click", function(event) {
+
             event.preventDefault();
+
             dashboardsection.classList.add("active");
 
-        })
+        });
 
-        const customerSection = 
+
+        const customerSection =
         document.querySelector(".customer-requests");
+
 
         const message =
         document.createElement("p");
+
 
         message.classList.add("welcome-msg");
 
@@ -154,32 +183,37 @@ form.addEventListener("submit" , function(event) {
 
         customerSection.appendChild(message);
 
+
         const customername =
         document.createElement("p");
 
+
         customername.classList.add("CustomerName");
 
-        customername.textContent = data.customer.customername;
+        customername.textContent =
+        data.customer.customername;
+
 
         const amount =
         document.createElement("p");
 
+
         amount.classList.add("amount-section");
 
-        amount.textContent = data.customer.amount;
-
+        amount.textContent =
+        data.customer.amount;
 
 
         customerSection.appendChild(customername);
+
         customerSection.appendChild(amount);
+
     })
+
     .catch(error => {
-        console.log("ERROR:" , error);
+
+        console.log("ERROR:", error);
+
     });
-    
+
 });
-
-
-
-
-
