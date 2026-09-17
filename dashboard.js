@@ -159,7 +159,7 @@ form.addEventListener("submit", function(event) {
         const customerLink =
         document.getElementById("customerLink");
 
-
+         if (customerLink) {
         customerLink.addEventListener("click", function(event) {
 
             event.preventDefault();
@@ -167,6 +167,7 @@ form.addEventListener("submit", function(event) {
             dashboardsection.classList.add("active");
 
         });
+         }
 
 
         const customerSection =
