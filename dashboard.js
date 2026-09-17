@@ -82,6 +82,12 @@ document.getElementById("closeModalBtn");
 
 const form =
 document.getElementById("paymentRequestForm");
+const dashboardsection =
+document.getElementById("dashboardsection");
+
+
+const customerLink =
+document.getElementById("customerLink");
 
 
 createPaymentRequest.addEventListener("click", function(event) {
@@ -152,12 +158,7 @@ form.addEventListener("submit", function(event) {
         console.log(data.customer);
 
 
-        const dashboardsection =
-        document.getElementById("dashboardsection");
-
-
-        const customerLink =
-        document.getElementById("customerLink");
+        
 
          if (customerLink) {
         customerLink.addEventListener("click", function(event) {
