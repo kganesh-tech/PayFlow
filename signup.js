@@ -34,7 +34,7 @@ form.addEventListener("submit" , function(event) {
 
    
 
-    fetch("http://localhost:3000/signup" , {
+    fetch("https://payflow-1-kh51.onrender.com/signup" , {
         method : "POST",
         headers : {
             "Content-Type" : "application/json"
